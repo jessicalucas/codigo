@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contatos
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#fff;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" placeholder="pesquisar.."></ion-searchbar>
+
+  <ion-card *ngFor='let contato of contatos' (click)="seleciona(contato)" id="restaurantes-card21">
+    <ion-list>
+      <ion-item id="restaurantes-list-item-container2">
+        <div id="restaurantes-markdown2" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <ion-icon name="contact" item-left></ion-icon>
+            <strong>
+              {{ contato.name }}
+            </strong>
+          </p>
+        </div>
+      </ion-item>
+
+      <ion-item color="balanced" id="restaurantes-list-item8">
+          E-mail - {{ contato.email }}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

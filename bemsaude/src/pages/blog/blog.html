@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar style="backgound:linear-gradient(-90deg, red, yellow);">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Blog
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="goToCadastroBlogNew()" *ngIf= "tipo == '0'">
+        <ion-icon name="ios-create-outline" ></ion-icon>Cadastrar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+
+  <ion-card *ngFor='let post of blog' id="blog-card22">
+
+    <!-- <img src="{{ post.card }}"/> -->
+    <ion-list>
+
+      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center; background-image: url('assets/imgs/blog.jpg'); background-size: cover;">
+         <h1  style="color: #8bfd84;font-weight: 700;padding-top:90px;"> Bem Saúde</h1>
+         <h2  style="color: #fff;font-weight: 700;">{{ post.title }}</h2>
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+
+      <ion-item color="assertive" id="blog-list-item13">
+        <ion-icon name="clipboard" item-left></ion-icon>
+        Autor: {{ post.name }} - <span (click)="goToViewBlog(post)" item-right><ion-icon name="ios-eye" item-right style="float:right;font-size: 2pc;"></ion-icon></span>
+      </ion-item>
+
+      <div *ngIf= "tipo == '0'">
+        <ion-item color="assertive" id="listarCardapios-list-item7">
+  		    <span (click)="goToCadastroBlog(post)"><ion-icon name="create" item-left></ion-icon>Editar</span>
+  		    <span (click)="goToDeletarBlog(post.id)" item-right><ion-icon name="close" item-left></ion-icon>Excluir</span>
+        </ion-item>
+      </div>
+
+    </ion-list>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,49 @@
+page-menu {
+
+    .scroll-content {
+      // background: #45504a;
+    }
+
+    .back-button.show-back-button {
+      display: none;
+    }
+
+    ion-item.item-block{
+      // border-bottom: 1px solid #c1bebe;
+    }
+    .toolbar-background-md {
+      background: #fff;
+       // background: #45504a;
+      // border-bottom: 2px solid #1cdB72;
+    }
+    .toolbar-title.toolbar-title-md {
+        color: #47bee2;
+    }
+    .label-md {
+        color: #fff;
+    }
+    ion-content#side-menu21 {
+       background: linear-gradient(#64c8e6, #3bd08b);
+    }
+    ion-item#menu-list-item7 {
+        background: rgba(59, 208, 139, 0);
+    }
+    ion-item#menu-list-item6 {
+      background: rgba(59, 208, 139, 0);
+    }
+    ion-item#menu-list-item5{
+      background: rgba(97, 195, 150, 0);
+    }
+    ion-item#menu-list-item4{
+      background: rgba(59, 208, 139, 0);
+    }
+    ion-item#menu-list-item3 {
+      background: rgba(59, 208, 139, 0);
+    }
+    ion-item#menu-list-item2 {
+      background: rgba(59, 208, 139, 0);
+    }
+    ion-item#menu-list-item1 {
+      background: rgba(100, 200, 230, 0);
+    }
+}

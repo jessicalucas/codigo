@@ -1,0 +1,63 @@
+page-login {
+
+  // .toolbar-title-md {
+  //     text-align:center;
+  // }
+  // .scroll-content {
+  //     padding-bottom: 0px !important;
+  // }
+
+  .img-logo {
+    width: 100%;
+  }
+
+  .color-field{
+    color: #fff;
+    font-size: 16px;
+  }
+
+  ion-input {
+    border-bottom: 1px solid #fff;
+  }
+
+  .scroll-content {
+    // background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    //             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    //             linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+      background: linear-gradient(#64c8e6, #3bd08b);
+
+  }
+
+  ::-webkit-input-placeholder  { color:fff; }
+  input:-moz-placeholder { color:#fff; }
+
+  .scroll-content,
+  .item-md {
+    // background: #45504a;
+  }
+
+
+
+  h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-weight: 700;
+    font-size: 29px;
+    color: #fff;
+  }
+
+  .toolbar-md {
+      padding: 0px;
+      min-height: unset;
+    }
+
+ .toolbar-background-md {
+    // background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  }
+
+  ion-label#lbl-7,
+  ion-label#lbl-8,
+  input.text-input.text-input-md {
+    // color: #fff;
+  }
+}

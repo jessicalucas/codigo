@@ -1,0 +1,2 @@
+Para rodar o aplicativo, é necessário instalar o WampServer e dentro do diretório 'wamp64 > www' colocar as duas pastas 'pedidos' e 'bemsaude'.
+Em seguida instale o ionic 3, juntamente com o NODEJS e, no prompt de comando, dentro do diretório bemsaude, digite o comando 'ionic server'.  

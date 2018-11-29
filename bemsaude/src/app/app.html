@@ -1,0 +1,38 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+          <img src="assets/imgs/batida.png" class="img-logo"/>
+          <br>
+          <h2>Bem Saúde</h2>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToPerfil()" id="menu-list-item1" *ngIf= "tipo == '0'">
+        Perfil
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToContatos()" id="menu-list-item2">
+        Contatos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToConsultas()" id="menu-list-item3">
+        Agenda
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToArtigos()" id="menu-list-item4">
+        Artigos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToBlog()" id="menu-list-item5">
+        Blog
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToInMail()" id="menu-list-item6">
+        In-Mail
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPaciente()" id="menu-list-item7" *ngIf= "tipo == '0'">
+        Cadastrar paciente
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

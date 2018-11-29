@@ -1,0 +1,31 @@
+page-perfilautenticado {
+  ion-label {
+    white-space: normal;
+  }
+
+.toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  color: #64c8e6;
+}
+
+
+  .scroll-content {
+    // background: #45504a;
+    // background: linear-gradient(217deg, rgba(0, 161, 255, 0.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.44), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background: linear-gradient(#64c8e6, #3bd08b);
+    }
+
+ .toolbar-background-md  {
+    background: #fff;
+ }
+
+  .item-md, .card-md {
+    background-color: transparent;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+  }
+
+  .label-md {
+      color: #100a0a;
+  }
+
+}

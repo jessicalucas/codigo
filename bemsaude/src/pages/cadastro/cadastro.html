@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar style="backgound:linear-gradient(-90deg, red, yellow);">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastrar Paciente
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#fff;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form id="cadastro-form2">
+    <ion-list id="cadastro-list3">
+      <ion-item id="cadastro-input3">
+        <ion-label>
+          Nome
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.name" name="name" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input3">
+        <ion-label>
+          Sobrenome
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.username" name="username" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input4">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" [(ngModel)]="usuario.email" name="email"  placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input5">
+        <ion-label>
+          Senha
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.password" name="password"  placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button id="cadastro-button3" (click)="submit()" ion-button color="secondary" block>
+      Salvar
+    </button>
+  </form>
+
+
+</ion-content>

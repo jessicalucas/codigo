@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Artigo
+    </ion-title>
+
+      <ion-buttons end>
+        <button ion-button right (click)="goToCadastroArtigoNew()" *ngIf= "tipo == '0'">
+          <ion-icon name="ios-create-outline" ></ion-icon>Cadastrar
+        </button>
+      </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+  <ion-card *ngFor='let post of artigo' id="artigos-card21">
+    <ion-list style="padding:12px; ">
+      <h1  style="color: #3bd08b; font-weight: 700;"> Bem Saúde
+          <span (click)="goToViewArtigo(post)" item-right><ion-icon name="ios-eye" item-right style="float:right;"></ion-icon></span>
+      </h1>
+      <br>
+      <h2  style="font-weight: 700;color: #b709c1;">{{ post.title }}</h2>
+      <hr>
+      <p>{{ post.summary }}</p>
+      <br>
+      <p><strong style="color:#64c8e6;"> Autor </strong>: {{ post.author }} </p>
+
+      <div *ngIf= "tipo == '0'">
+        <ion-item color="assertive" id="listarCardapios-list-item7">
+  		    <span (click)="goToCadastroArtigo(post)"><ion-icon name="create" item-left></ion-icon>Editar</span>
+  		    <span (click)="goToDeletarArtigo(post.id)" item-right><ion-icon name="close" item-left></ion-icon>Excluir</span>
+        </ion-item>
+      </div>
+
+    </ion-list>
+  </ion-card>
+</ion-content>

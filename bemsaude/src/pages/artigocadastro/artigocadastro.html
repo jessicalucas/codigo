@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        Artigo
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="goToArtigo()">
+        <ion-icon name="arrow-back"></ion-icon>Voltar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form id="cadastro-form2">
+    <ion-list id="cadastro-list3">
+      <ion-item id="cadastro-input3">
+        <ion-label stacked>
+          Título
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="artigo.title" name="title" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input4">
+        <ion-label stacked>
+          Palavra-chave
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="artigo.keywords" name="keywords" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input4">
+        <ion-label stacked>
+          Autor
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="artigo.author" name="keywords" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input5">
+        <ion-label stacked>
+          Resumo
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="artigo.summary" name="summary"  laceholder=""></ion-input>
+      </ion-item>
+      <ion-item id="cadastro-input5">
+        <ion-label stacked>
+          Conteúdo
+        </ion-label>
+        <ion-textarea rows="15" [(ngModel)]="artigo.description" name="content" placeholder=""></ion-textarea>
+        <!-- <ion-input type="text" [(ngModel)]="artigo.description" name="content"  laceholder=""></ion-input> -->
+      </ion-item>
+    </ion-list>
+    <button id="cadastro-button3" (click)="submit()" ion-button color="secondary" block>
+      Salvar Artigo
+    </button>
+  </form>
+</ion-content>

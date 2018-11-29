@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Bem Saúde
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#3bd08b;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="side-menu21">
+
+  <!-- <ion-card> -->
+    <ion-list id="menu-list1">
+      <div *ngIf= "tipo == '0'">
+        <ion-item color="none" menuClose="" on-click="goToPerfil()" id="menu-list-item1">
+          Meu Perfil
+        </ion-item>
+      </div>
+      <ion-item color="none" menuClose="" on-click="goToContatos()" id="menu-list-item2">
+        Contatos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToConsultas()" id="menu-list-item3">
+        Agenda
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToArtigos()" id="menu-list-item4">
+        Artigos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToBlog()" id="menu-list-item5">
+        Blog
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToInMail()" id="menu-list-item6">
+        In-Mail
+      </ion-item>
+      <div *ngIf= "tipo == '0'">
+        <ion-item color="none" menuClose="" on-click="goToPaciente()" id="menu-list-item7">
+          Cadastrar Paciente
+        </ion-item>
+      </div>
+    </ion-list>
+  <!-- </ion-card> -->
+
+</ion-content>

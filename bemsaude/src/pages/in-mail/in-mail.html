@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      In-Mail
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#fff;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8">
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" placeholder="pesquisar.."></ion-searchbar>
+
+  <div padding>
+    <ion-segment [(ngModel)]="message">
+      <ion-segment-button value="entrada">
+        Entrada
+      </ion-segment-button>
+      <ion-segment-button value="saida">
+        Saída
+      </ion-segment-button>
+      <ion-segment-button value="novo">
+        Novo
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+    <div [ngSwitch]="message">
+      <div *ngFor="let contato of inmail">
+        <ng-container *ngSwitchCase="'entrada'">
+            <ion-label>{{ contato.name }}</ion-label>
+            <ion-icon ios="ios-mail" md="ios-mail-outline"></ion-icon> {{ contato.message }}
+            <hr>
+        </ng-container>
+      </div>
+
+      <div  *ngFor="let enviado of enviados">
+        <ng-container *ngSwitchCase="'saida'">
+          <ion-label>{{ enviado.message }}</ion-label>
+          in-mail enviado: {{ enviado.email }}
+          <hr>
+        </ng-container>
+      </div>
+
+      <div>
+        <ng-container *ngSwitchCase="'novo'">
+          <form id="cadastro-form2">
+            <ion-list id="cadastro-list3">
+              <ion-item id="cadastro-input5">
+                <ion-label stacked>
+                  Contatos
+                </ion-label>
+                <ion-select [(ngModel)]="newInmail.sender_id" name="sender_id">
+                  <ion-option *ngFor="let contato of contatos" [value] = "contato.id">{{ contato.name }}</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item id="cadastro-input5">
+                <ion-label stacked>
+                  Mensagem
+                </ion-label>
+                <ion-textarea rows="9" [(ngModel)]="newInmail.message" name="message" placeholder=""></ion-textarea>
+              </ion-item>
+            </ion-list>
+            <button id="cadastro-button3" (click)="submit()" ion-button color="secondary" block>
+              Enviar
+            </button>
+          </form>
+        </ng-container>
+      </div>
+    </div>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Agenda
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#fff;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+
+  <ion-card *ngFor='let consulta of agenda' id="restaurantes-card21">
+    <ion-list>
+      <ion-item id="restaurantes-list-item-container2">
+        <div id="restaurantes-markdown2" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;">
+            <strong>
+              <ion-icon name="contact" item-left></ion-icon>
+              Paciente: {{ consulta.nameUser }} - {{ consulta.title  }}
+            </strong>
+          </p>
+          <hr>
+          <p>
+              Descrição: {{ consulta.description }}
+          </p>
+        </div>
+      </ion-item>
+      <ion-item> Atendimento marcado para: </ion-item>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+          {{ consulta.created_at | date: "MM/dd/yyyy - HH:mm"}}
+      </ion-item>
+
+        <ion-item color="assertive" id="listarCardapios-list-item7" *ngIf= "tipo == '1'">
+  		    <span (click)="goToDeletarConsulta(consulta.id)" item-right><ion-icon name="close" item-left></ion-icon> Remover consulta</span>
+        </ion-item>
+
+    </ion-list>
+  </ion-card>
+</ion-content>

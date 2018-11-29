@@ -1,0 +1,39 @@
+<ion-header style="background: #45504a;">
+  <ion-navbar >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        Meu Perfil
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="goToBlog()">
+        <ion-icon name="arrow-back"></ion-icon>Voltar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form id="cadastro-form2">
+    <ion-list id="cadastro-list3">
+      <ion-item id="cadastro-input5">
+        <ion-label stacked>
+          Sobre
+        </ion-label>
+        <ion-textarea rows="15" [(ngModel)]="perfil.about" name="about" placeholder="escreva sobre você"></ion-textarea>
+      </ion-item>
+
+      <ion-item id="cadastro-input5">
+        <ion-label stacked>
+          Recomendações
+        </ion-label>
+        <ion-textarea rows="15" [(ngModel)]="perfil.who_recommended" name="who_recommended" placeholder=""></ion-textarea>
+        <!-- <ion-input type="text" [(ngModel)]="blog.content" name="content"  laceholder=""></ion-input> -->
+      </ion-item>
+    </ion-list>
+    <button id="cadastro-button3" (click)="submit()" ion-button color="secondary" block>
+      Salvar Perfil
+    </button>
+  </form>
+</ion-content>

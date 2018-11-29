@@ -1,0 +1,18 @@
+page-contatos {
+
+  .scroll-content {
+      // background: linear-gradient(#64c8e6, #3bd08b);
+   }
+
+   .toolbar-background-md {
+       background: linear-gradient(#64c8e6, #3bd08b);
+   }
+
+   ion-icon.icon.icon-md.ion-md-contact.item-icon {
+     color: rgba(199, 15, 214, 0.49) !important;
+   }
+
+   b, strong {
+    color: #64c8e6;
+  }
+}

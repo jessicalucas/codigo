@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Perfil
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button right (click)="logout()" style="color:#fff;">
+        <ion-icon ios="ios-undo" md="md-undo"></ion-icon>Sair
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="page1">
+  <ion-card *ngFor='let user of perfil'>
+    <ion-card-header>
+        {{ user.nameuser }}
+    </ion-card-header>
+    <hr>
+    <ion-card-content>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+          Nascimento: {{ user.birthday | date: "MM/dd/yyyy" }}
+      </ion-item>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+          Email: {{ user.email }}
+      </ion-item>
+      <div *ngIf= "tipo == '1'">
+        <ion-item color="balanced" id="restaurantes-list-item8">
+            Telefone(s) de atendimento: {{ user.cellphone }}
+        </ion-item>
+      </div>
+      <div *ngIf= "tipo == '0'">
+        <ion-item color="balanced" id="restaurantes-list-item8">
+            Telefone: {{ user.cellphone }}
+        </ion-item>
+      </div>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+            Sobre: {{ user.about }}
+      </ion-item>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+              Área que atua: {{ user.name }}
+      </ion-item>
+      <ion-item color="balanced" id="restaurantes-list-item8">
+              Recomedações: {{ user.who_recommended }}
+      </ion-item>
+      <ion-item *ngIf= "tipo == '0'">
+        <ion-label>Permitir in-mail</ion-label>
+        <ion-checkbox [(ngModel)]="pushNotification"
+                              (ionChange)="pushNotificationChange()">
+                  Push Notifications
+                </ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
